@@ -175,6 +175,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -345,6 +346,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -357,6 +361,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dolce.Core\Dolce.Core.csproj">
+      <Project>{de5926a8-6db8-4844-b6ce-f48d5b883eb3}</Project>
+      <Name>Dolce.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dolce.DataAccess.InMemory\Dolce.DataAccess.InMemory.csproj">
+      <Project>{c5e92156-7775-4083-910e-2c2ec0bee9a8}</Project>
+      <Name>Dolce.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dolce.DataAccess.SQL\Dolce.DataAccess.SQL.csproj">
+      <Project>{baa63b02-d0a9-4bd7-8ae1-0670960bea41}</Project>
+      <Name>Dolce.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dolce.Services\Dolce.Services.csproj">
+      <Project>{dd211cfd-2c5a-41ab-b754-2d3f23f516a5}</Project>
+      <Name>Dolce.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Dolce.Core.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+       
         [StringLength(30)]
         public string Name { get; set; }
         public string Description { get; set; }
@@ -17,10 +17,7 @@ namespace Dolce.Core.Models
         public string Category { get; set; }
         public string Image;
 
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+      
 
     }
 

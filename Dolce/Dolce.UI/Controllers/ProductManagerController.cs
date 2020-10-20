@@ -12,10 +12,12 @@ namespace Dolce.UI.Controllers
     public class ProductManagerController : Controller
     {
         // GET: ProductManager
-        ProductRepository context;
-        public ProductManagerController()
+        IRepository<Product> context;
+        IRepository<ProductCategory> productCategories;
+        public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
         {
-            context = new ProductRepository();
+            context = productContext;
+            productCategories = productCategoryContext;
         }
         public ActionResult Index()
         {
